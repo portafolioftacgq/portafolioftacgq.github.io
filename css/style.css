@@ -1,5 +1,5 @@
 .carousel {
-    width: 80%; /* Ajusta el ancho del carrusel */
+    width: 80%; 
     margin: 0 auto;
     position: relative;
 }
@@ -10,7 +10,7 @@
 }
 
 .carousel-item {
-    min-width: 100%; /* Cada imagen ocupa el 100% del ancho */
+    min-width: 100%; 
     transition: transform 0.5s ease-in-out;
 }
 
@@ -18,6 +18,7 @@
     display: block;
     width: 100%;
     height: auto;
+    object-fit: contain; /*  Asegura que la imagen se ajuste al contenedor */
 }
 
 .carousel-control {
