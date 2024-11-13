@@ -2,5 +2,6 @@
     .carousel-inner > .item > img,
     .carousel-inner > .item > a > img {
         width: 80%; /* Ajusta el ancho para pantallas pequeñas */
+        margin: auto;
     }
 }
