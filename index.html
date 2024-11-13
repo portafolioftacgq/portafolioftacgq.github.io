@@ -31,9 +31,20 @@
             /* Ajusta el valor según la separación que desees */
         }
 
+        .espacio {
+            margin-top: 50px;
+        }
+
         /* Body */
         body {
             background-color: #f8f9fa;
+        }
+
+        .btn-primary:hover {
+            background-color: #66a5ff;
+            /* Azul más claro al pasar el ratón */
+            border-color: #006aff;
+            /* Borde azul más claro */
         }
     </style>
 </head>
@@ -130,11 +141,13 @@
         </div>
         <!-- FIN BOTON DE GALERIA -->
         <!-- INICIO VIDEO -->
-        <div class="row">
+        <div class="espacio"></div>
+        <div class="row" style="margin-top: 30px;">
             <div class="col-xs-12 text-center">
+                <h4> ¡Ven a observar mi trabajo!</h4>
                 <div class="embed-responsive embed-responsive-16by9">
                     <iframe class="embed-responsive-item" width="560" height="315"
-                        src="https://www.youtube.com/embed/DFzV544BEzU?si=5EcPIr_QVe0fcYpc"    
+                        src="https://www.youtube.com/embed/DFzV544BEzU?si=5EcPIr_QVe0fcYpc"  
                         title="YouTube video player" frameborder="0"
                         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                           referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>  
@@ -148,18 +161,21 @@
     <footer class="footer">
         <div class="container">
             <div class="row">
-                <div class="col-md-6">
-                    <p>
-                        Creado en 2024 por Alison C. Garzón (Fotografa) & Juan D. Gómez (Diseñador y Desarrollador).<br>
-                        Repositorio:
-                        <link rel="stylesheet"
-                            href="https://github.com/portafolioftacgq/portafolioftacgq.github.io/tree/main/img"><br>
-                        Información de la creadora: Joven estudiante de fotografia y diseño, con experiencia en el
-                        diseño de portafolios.
-                    </p>
+                <div class="col-md-12 text-center">
+                    <img src="/profileAlison/profileCreator.jpg" alt="Foto creadora"
+                        class="img-circle align-self-center" width="100">
+                    <p>Alison C. Garzón</p>
                 </div>
-                <div class="col-md-6 text-right">
-                    <img src="/profileAlison/profileCreator.jpg" alt="Foto creadora" class="img-circle" width="50">
+                <div class="col-md-4">
+                    <p>Creado en 2024 por Alison C. Garzón (Fotografa) & Juan D. Gómez (Diseñador y Desarrollador).</p>
+                </div>
+                <div class="col-md-4">
+                    <p>Repositorio: <a
+                            href="https://github.com/portafolioftacgq/portafolioftacgq.github.io/tree/main/img">Portafolio Directo</a></p>
+                </div>
+                <div class="col-md-4">
+                    <p>Información de la creadora: Joven estudiante de fotografia y diseño, con experiencia en el diseño
+                        de portafolios.</p>
                 </div>
             </div>
         </div>
