@@ -1,59 +1,59 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <title>Carousel/Slideshow</title>
+    <title>Galería de Fotos</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-    <!-- <link rel="stylesheet" href="css/style.css">  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/1.6.12/css/lightgallery.min.css"> 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/1.6.12/js/lightgallery.min.js"></script>
 </head>
 <body>
-    <!-- Gallery -->
-<div class="row">
-    <div class="col-lg-4 col-md-12 mb-4 mb-lg-0">
-      <img
-        src="img/1000150708-01.jpg"
-        class="w-100 shadow-1-strong rounded mb-4"
-        alt="Boat on Calm Water"
-      />
-  
-      <img
-        src="img/1725206606144.jpg"
-        class="w-100 shadow-1-strong rounded mb-4"
-        alt="Wintry Mountain Landscape"
-      />
+
+    <nav class="navbar navbar-default">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <a class="navbar-brand" href="#">Mi Galería</a>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-6 col-md-3">
+                <a href="img/1000150708-01.jpg" class="thumbnail" data-lg-size="1200-800">
+                    <img src="img/1000150708-01.jpg" class="img-responsive" alt="Imagen 1">
+                </a>
+            </div>
+            <div class="col-xs-6 col-md-3">
+                <a href="img/1725206606144.jpg" class="thumbnail" data-lg-size="1200-800">
+                    <img src="img/1725206606144.jpg" class="img-responsive" alt="Imagen 2">
+                </a>
+            </div>
+            <div class="col-xs-6 col-md-3">
+                <a href="img/1725206606164.jpg" class="thumbnail" data-lg-size="1200-800">
+                    <img src="img/1725206606164.jpg" class="img-responsive" alt="Imagen 3">
+                </a>
+            </div>
+            <div class="col-xs-6 col-md-3">
+                <a href="img/image5.png" class="thumbnail" data-lg-size="1200-800">
+                    <img src="img/image5.png" class="img-responsive" alt="Imagen 4">
+                </a>
+            </div>
+            </div>
     </div>
-  
-    <div class="col-lg-4 mb-4 mb-lg-0">
-      <img
-        src="img/1725206606164.jpg"
-        class="w-100 shadow-1-strong rounded mb-4"
-        alt="Mountains in the Clouds"
-      />
-  
-      <img
-        src="img/image5.png"
-        class="w-100 shadow-1-strong rounded mb-4"
-        alt="Boat on Calm Water"
-      />
-    </div>
-  
-    <div class="col-lg-4 mb-4 mb-lg-0">
-      <img
-        src="img/IMG_20240820_151132.jpg"
-        class="w-100 shadow-1-strong rounded mb-4"
-        alt="Waves at Sea"
-      />
-  
-      <img
-        src="img/IMG_20240820_154711.jpg"
-        class="w-100 shadow-1-strong rounded mb-4"
-        alt="Yosemite National Park"
-      />
-    </div>
-  </div>
-  <!-- Gallery -->
+
+    <footer class="footer">
+        <div class="container">
+            <p class="text-muted">Pie de página</p>
+        </div>
+    </footer>
+
+    <script>
+        lightGallery(document.querySelector('.row')); 
+    </script>
+
 </body>
 </html>
