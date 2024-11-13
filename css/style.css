@@ -1,24 +1,3 @@
-/* Navbar */
-.navbar-default {
-  background-color: #212529;
-  border-color: #212529;
-}
-
-.navbar-default .navbar-brand {
-  color: #ffffff;
-}
-
-/* Footer */
-.footer {
-  background-color: #343a40;
-  color: #ffffff;
-}
-
-/* Body */
-body {
-  background-color: #f8f9fa;
-}
-
 @media (max-width: 768px) {
   .carousel-inner > .item > img,
   .carousel-inner > .item > a > img {

@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <title>Carousel/Slideshow</title>
     <meta charset="utf-8">
@@ -7,15 +8,41 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-    <link rel="stylesheet" href="css/style.css"> 
+    <link rel="stylesheet" href="css/style.css">
     <!-- <script src="js/script.js"></script> -->
+    <style>
+        /* Navbar */
+        .navbar-default {
+            background-color: #4682B4;
+            /* Steel blue */
+            border-color: #4682B4;
+        }
+
+        .navbar-default .navbar-brand {
+            color: #ffffff;
+        }
+
+        /* Footer */
+        .footer {
+            background-color: #696969;
+            /* Dim gray */
+            color: #ffffff;
+        }
+
+        /* Body */
+        body {
+            background-color: #f8f9fa;
+        }
+    </style>
 </head>
+
 <body>
     <nav class="navbar navbar-default">
         <div class="container-fluid">
             <div class="navbar-header">
-                <a class="navbar-brand" href="/">ACGQ</a>
-                <a class="navbar-brand" href="#">
+                <a class="navbar-brand" href="/">ACGQ</a>  
+
+                <a class="navbar-brand"   href="#">
                     <img src="/img/logo.png" alt="Logo" height="30">
                 </a>
             </div>
@@ -81,43 +108,46 @@
         </div>
     </div>
     <!-- BOTON DE GALERIA -->
-    <div class="row">
-        <div class="col-xs-12">
-            <div class="jumbotron text-center"> 
-                <h1 class="display-4">¡Bienvenido a nuestra galería!</h1> 
-                <p class="lead">Descubre una colección de imágenes increíbles.</p>
+    <div class="container">
+
+        <div class="row">
+            <div class="col-xs-12">
+                <div class="jumbotron text-center">
+                    <h1 class="display-4">¡Bienvenido a nuestra galería!</h1>
+                    <p class="lead">Descubre una colección de imágenes increíbles.</p>
+                </div>
             </div>
         </div>
-    </div>
-    <div class="row">
-        <div class="col-xs-12 text-center">
-            <a href="pages/galeria.html" class="btn btn-primary btn-lg" 
-               style="background-color: #007bff; /* Azul inicial */
-                      border-color: #0099ff; /* Borde azul inicial */
-                      transition: background-color 0.3s, border-color 0.3s;"> 
-                Ver Galería
-            </a>
-        </div>
-    </div>
-    <!-- FIN BOTON DE GALERIA -->
 
-<!-- VIDEO -->
-<div class="row"> 
-    <div class="col-xs-12 text-center"> 
-        <iframe width="560" height="315" src="https://www.youtube.com/embed/DFzV544BEzU?si=5EcPIr_QVe0fcYpc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"   
- referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        <div class="row">
+            <div class="col-xs-12 text-center">
+                <a href="galeria.html" class="btn btn-primary btn-lg"
+                    style="background-color: #007bff; border-color: #007bff; transition: background-color 0.3s, border-color 0.3s;">Ver
+                    Galería</a>
+            </div>
+        </div>
+        <!-- FIN BOTON DE GALERIA -->
+        <!-- INICIO VIDEO -->
+        <div class="row" style="margin-top: 30px;">
+            <div class="col-xs-12 text-center">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/DFzV544BEzU?si=5EcPIr_QVe0fcYpc"
+                    title="YouTube video player" frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                      referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>  
+
+            </div>
+        </div>
+        <!-- FIN VIDEO -->
     </div>
-</div>
-<!-- FIN VIDEO -->
 
     <footer class="footer">
         <div class="container">
             <div class="row">
                 <div class="col-md-6">
                     <p class="text-muted">
-                        Creado en 2024 por Alison C. Garzón (Fotografa) & Juan D. Gómez (Diseñador y Desarrollador).<br>
-                        Repositorio: <link rel="stylesheet" href="https://github.com/portafolioftacgq/portafolioftacgq.github.io/tree/main/img"><br>
-                        Información de la creadora: Joven estudiante de fotografia y diseño, con experiencia en el diseño de portafolios.
+                        Creado en 2024 por [Nombre del creador].<br>
+                        Repositorio: [Enlace al repositorio]<br>
+                        Información de la creadora: [Información de la creadora]
                     </p>
                 </div>
                 <div class="col-md-6 text-right">
@@ -126,5 +156,9 @@
             </div>
         </div>
     </footer>
+
+
+
 </body>
+
 </html>
