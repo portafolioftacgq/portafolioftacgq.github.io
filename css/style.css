@@ -13,3 +13,8 @@
         margin: auto;
     }
 }
+
+.btn-primary:hover {
+    background-color: #66a5ff; /* Azul más claro al pasar el ratón */
+    border-color: #66a5ff; /* Borde azul más claro */
+}
