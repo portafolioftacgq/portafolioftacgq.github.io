@@ -1,124 +1,45 @@
-// Datos de las imágenes del carrusel (reemplaza con tus datos)
-const imagenesCarrusel = [
-    { url: "img/1000150708-01.jpg", alt: "Imagen 1" },
-    { url: "img/1725206606144.jpg", alt: "Imagen 2" },
-    { url: "img/1725206606164.jpg", alt: "Imagen 3" },
-    // ... más imágenes
-  ];
-  
-  // Función para crear el carrusel
-  function crearCarrusel(contenedor, imagenes) {
-    const track = contenedor.querySelector(".carrusel-track");
-    const prevButton = contenedor.querySelector(".carrusel-prev");
-    const nextButton = contenedor.querySelector(".carrusel-next");
-    const dotsContainer = contenedor.querySelector(".carrusel-dots");
-  
-    let currentIndex = 0;
-    let intervalId;
-  
-    // Crear los puntos de navegación
-    imagenes.forEach((imagen, index) => {
-      const dot = document.createElement("div");
-      dot.classList.add("carrusel-dot");
-      dot.addEventListener("click", () => {
-        clearInterval(intervalId);
-        currentIndex = index;
-        actualizarCarrusel();
-      });
-      dotsContainer.appendChild(dot);
-    });
-  
-    // Actualizar el carrusel
-    function actualizarCarrusel() {
-      const trackWidth = track.offsetWidth;
-      const translateX = -trackWidth * currentIndex;
-      track.style.transform = `translateX(${translateX}px)`;
-  
-      // Actualizar los puntos de navegación
-      const dots = dotsContainer.querySelectorAll(".carrusel-dot");
-      dots.forEach((dot) => dot.classList.remove("active"));
-      dots[currentIndex].classList.add("active");
+const carouselInner = document.querySelector('.carousel-inner');
+const items = document.querySelectorAll('.carousel-item');
+const prevBtn = document.querySelector('.prev');
+const nextBtn = document.querySelector('.next');
+let currentIndex = 0;
+
+function showSlide(index) {
+    const translateX = -index * 100 + '%';
+    carouselInner.style.transform = `translateX(${translateX})`;
+    items.forEach(item => item.classList.remove('active'));
+    items[index].classList.add('active');
+}
+
+function nextSlide() {
+    currentIndex = (currentIndex + 1) % items.length;
+    showSlide(currentIndex);
+}
+
+function prevSlide() {
+    currentIndex = (currentIndex - 1 + items.length) % items.length;
+    showSlide(currentIndex);
+}
+
+prevBtn.addEventListener('click', prevSlide);
+nextBtn.addEventListener('click', nextSlide);
+
+// Automatización (opcional):
+setInterval(nextSlide, 5000); // Cambia la imagen cada 5 segundos
+
+// Modal para mostrar la imagen en grande
+const modal = document.querySelector(".modal");
+const modalImg = document.querySelector(".modal-content");
+const closeModal = document.querySelector(".close-modal");
+const images = document.querySelectorAll('.carousel-item img');
+
+images.forEach(image => {
+    image.onclick = function() {
+        modal.style.display = "block";
+        modalImg.src = this.src;
     }
-  
-    // Mover el carrusel hacia adelante
-    function moverSiguiente() {
-      currentIndex = (currentIndex + 1) % imagenes.length;
-      actualizarCarrusel();
-    }
-  
-    // Mover el carrusel hacia atrás
-    function moverAnterior() {
-      currentIndex = (currentIndex - 1 + imagenes.length) % imagenes.length;
-      actualizarCarrusel();
-    }
-  
-    // Iniciar el intervalo para la transición automática
-    function iniciarTransicionAutomatica() {
-      intervalId = setInterval(moverSiguiente, 5000); // Cambiar cada 5 segundos
-    }
-  
-    // Detener la transición automática
-    function detenerTransicionAutomatica() {
-      clearInterval(intervalId);
-    }
-  
-    // Event listeners para los botones y la transición automática
-    prevButton.addEventListener("click", moverAnterior);
-    nextButton.addEventListener("click", moverSiguiente);
-    contenedor.addEventListener("mouseenter", detenerTransicionAutomatica);
-    contenedor.addEventListener("mouseleave", iniciarTransicionAutomatica);
-  
-    // Agregar event listener para el zoom al hacer clic en la imagen
-    track.addEventListener("click", (event) => {
-      if (event.target.tagName === "IMG") {
-        mostrarImagenZoom(event.target.src, event.target.alt);
-      }
-    });
-  
-    // Función para mostrar la imagen con zoom
-    function mostrarImagenZoom(url, alt) {
-      // Crear un elemento para la imagen con zoom
-      const zoomImg = document.createElement("img");
-      zoomImg.src = url;
-      zoomImg.alt = alt;
-      zoomImg.style.maxWidth = "90%";
-      zoomImg.style.maxHeight = "90vh";
-      zoomImg.style.position = "fixed";
-      zoomImg.style.top = "50%";
-      zoomImg.style.left = "50%";
-      zoomImg.style.transform = "translate(-50%, -50%) scale(0.1)"; // Iniciar con un zoom pequeño
-      zoomImg.style.transition = "transform 0.3s ease-in-out";
-      zoomImg.style.zIndex = "100";
-      zoomImg.style.cursor = "pointer"; // Cambiar el cursor al hacer hover
-  
-      // Agregar la imagen al body
-      document.body.appendChild(zoomImg);
-  
-      // Aplicar la animación de zoom
-      setTimeout(() => {
-        zoomImg.style.transform = "translate(-50%, -50%) scale(1)";
-      }, 10); // Esperar un poco antes de aplicar el zoom
-  
-      // Cerrar la imagen al hacer clic
-      zoomImg.addEventListener("click", () => {
-        document.body.removeChild(zoomImg);
-      });
-    }
-  
-    // Inicializar el carrusel
-    actualizarCarrusel();
-    iniciarTransicionAutomatica();
-  }
-  
-  // Crear el carrusel
-  const carrusel = document.querySelector(".carrusel");
-  crearCarrusel(carrusel, imagenesCarrusel);
-  
-  
-  // Agregar un event listener para el botón de menú 
-  const menuBtn = document.querySelector('.menu-btn'); 
-  
-  menuBtn.addEventListener('click', () => {
-    const sidebar = document.querySelector('.sidebar');
-    sidebar.classList.toggle('hidden');
-  });
+});
+
+closeModal.onclick = function() {
+    modal.style.display = "none";
+}

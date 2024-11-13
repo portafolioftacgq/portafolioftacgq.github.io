@@ -1,57 +1,40 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Nombre del Proyecto</title>
-  <link rel="stylesheet" href="CSS/style.css"> 
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" 
-  integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" 
-  crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carrusel de Fotos</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-  <div class="navbar">
-    <button class="menu-btn">☰</button>
-    <h2>Nombre del Proyecto</h2>
-    <ul class="nav">
-      <li><a href="#home">Inicio</a></li>
-      <li><a href="#about">Acerca de</a></li>
-      <li><a href="#services">Servicios</a></li>
-      <li><a href="#contact">Contacto</a></li>
-    </ul>
-  </div>
-
-  <div class="content">
-
-    <div class="carrusel">
-      <div class="carrusel-container">
-        <div class="carrusel-track">
-          <img src="img/1000150708-01.jpg" alt="Imagen 1">
-          <img src="img/1725206606144.jpg" alt="Imagen 2">
-          <img src="img/1725206606164.jpg" alt="Imagen 3">
-          </div>
-        <button class="carrusel-prev">&lt;</button>
-        <button class="carrusel-next">&gt;</button>
-      </div>
-      <div class="carrusel-dots">
-      </div>
+    <div class="carousel">
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img src="img\1000150708-01.jpg" alt="Imagen 1">
+            </div>
+            <div class="carousel-item">
+                <img src="img\1725206606144.jpg" alt="Imagen 2">
+            </div>
+            <div class="carousel-item">
+                <img src="img\1725206606164.jpg" alt="Imagen 3">
+            </div>
+            </div>
+        <button class="carousel-control prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="sr-only">Anterior</span>
+        </button>
+        <button class="carousel-control next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="sr-only">Siguiente</span>
+        </button>
     </div>
 
-    <div class="video-container">
-        <iframe width="560" height="315" src="https://www.youtube.com/embed/ObjVyA2Jeew?si=R_6YJstSxx6jPCHl" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    <div class="modal">
+        <span class="close-modal">&times;</span>
+        <img class="modal-content" id="img01">
     </div>
 
-    <div class="autor">
-      <img src="foto-autor.jpg" alt="Foto del autor">
-      <div class="info-autor">
-        <h3>Nombre del autor</h3>
-        <p>Información del autor</p>
-      </div>
-    </div>
-
-  </div>
-
-  <script src="JS/script.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>
