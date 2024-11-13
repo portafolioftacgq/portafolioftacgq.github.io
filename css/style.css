@@ -1,3 +1,7 @@
+body {
+    background-color: #f0f0f0; /* Color de fondo gris claro */
+  }
+
 @media (max-width: 768px) { 
     .carousel-inner > .item > img,
     .carousel-inner > .item > a > img {
