@@ -1,8 +1,8 @@
 // Datos de las imágenes del carrusel (reemplaza con tus datos)
 const imagenesCarrusel = [
-    { url: "IMG/FOTOS_USB/FOTOS_SEMESTRE/1000150708-01.jpg", alt: "Imagen 1" },
-    { url: "IMG/FOTOS_USB/FOTOS_SEMESTRE/image5.png", alt: "Imagen 2" },
-    { url: "IMG/FOTOS_USB/FOTOS_SEMESTRE/IMG_20240820_151132.jpg", alt: "Imagen 3" },
+    { url: "img/1000150708-01.jpg", alt: "Imagen 1" },
+    { url: "img/1725206606144.jpg", alt: "Imagen 2" },
+    { url: "img/1725206606164.jpg", alt: "Imagen 3" },
     // ... más imágenes
   ];
   
