@@ -1,24 +1,41 @@
-body {
-    background-color: #f0f0f0; /* Color de fondo gris claro */
-  }
+/* Navbar */
+.navbar-default {
+  background-color: #212529;
+  border-color: #212529;
+}
 
-@media (max-width: 768px) { 
-    .carousel-inner > .item > img,
-    .carousel-inner > .item > a > img {
-        width: 80%; /* Ajusta el ancho para pantallas pequeñas */
-        margin: auto;
-    }
+.navbar-default .navbar-brand {
+  color: #ffffff;
+}
+
+/* Footer */
+.footer {
+  background-color: #343a40;
+  color: #ffffff;
+}
+
+/* Body */
+body {
+  background-color: #f8f9fa;
+}
+
+@media (max-width: 768px) {
+  .carousel-inner > .item > img,
+  .carousel-inner > .item > a > img {
+    width: 80%; /* Ajusta el ancho para pantallas pequeñas */
+    margin: auto;
+  }
 }
 
 @media (min-width: 768px) {
-    .carousel-inner > .item > img,
-    .carousel-inner > .item > a > img {
-        width: 50%;  /* Ajusta este valor según necesites */
-        margin: auto;
-    }
+  .carousel-inner > .item > img,
+  .carousel-inner > .item > a > img {
+    width: 50%; /* Ajusta este valor según necesites */
+    margin: auto;
+  }
 }
 
 .btn-primary:hover {
-    background-color: #66a5ff; /* Azul más claro al pasar el ratón */
-    border-color: #006aff; /* Borde azul más claro */
+  background-color: #66a5ff; /* Azul más claro al pasar el ratón */
+  border-color: #006aff; /* Borde azul más claro */
 }
