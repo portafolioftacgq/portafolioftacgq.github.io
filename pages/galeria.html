@@ -7,24 +7,47 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/1.6.12/css/lightgallery.min.css"> 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/1.6.12/css/lightgallery.min.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/1.6.12/js/lightgallery.min.js"></script>
+    <style>
+        /* Navbar */
+        .navbar-default {
+            background-color: #212529;
+            border-color: #212529;
+        }
+
+        .navbar-default .navbar-brand {
+            color: #ffffff;
+        }
+
+        /* Footer */
+        .footer {
+            background-color: #343a40;
+            color: #ffffff;
+        }
+
+        /* Body */
+        body {
+            background-color: #f8f9fa;
+        }
+    </style>
 </head>
+
 <body>
 
     <nav class="navbar navbar-default">
         <div class="container-fluid">
             <div class="navbar-header">
-                <a class="navbar-brand" href="/">Inicio</a> 
+                <a class="navbar-brand" href="/">Inicio</a>
                 <a class="navbar-brand" href="#">
-                    <img src="/img/logo.png" alt="Logo" height="30"> 
+                    <img src="/img/logo.png" alt="Logo" height="30">
                 </a>
             </div>
         </div>
     </nav>
 
     <div class="container">
-        <div class="row lightgallery"> 
+        <div class="row lightgallery">
             <div class="col-xs-6 col-md-3">
                 <a href="/img/1000150708-01.jpg" data-lg-size="1200-800">
                     <img src="/img/1000150708-01.jpg" class="img-responsive" alt="Imagen 1">
@@ -45,7 +68,7 @@
                     <img src="/img/image5.png" class="img-responsive" alt="Imagen 4">
                 </a>
             </div>
-        </div> 
+        </div>
     </div>
 
     <footer class="footer">
@@ -58,15 +81,21 @@
                         Información de la creadora: [Información de la creadora]
                     </p>
                 </div>
-                <div class="col-md-6 text-right"> 
-                    <img src="/img/foto-creadora.jpg" alt="Foto creadora" class="img-circle" width="50"> 
+                <div class="col-md-6 text-right">
+                    <img src="/img/foto-creadora.jpg" alt="Foto creadora" class="img-circle" width="50">
                 </div>
             </div>
         </div>
     </footer>
 
     <script>
-        lightGallery(document.querySelector('.lightgallery'));  
+        lightGallery(document.querySelector('.lightgallery'), {
+            download: false, 
+            counter: false,   
+            fullScreen: false, 
+            zoom: false,      
+            share: false      
+        });
     </script>
 
 </body>
