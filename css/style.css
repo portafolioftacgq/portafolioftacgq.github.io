@@ -5,3 +5,16 @@
         margin: auto;
     }
 }
+
+@media (min-width: 768px) {
+    .carousel-inner > .item > img,
+    .carousel-inner > .item > a > img {
+        width: 50%;  /* Ajusta este valor según necesites */
+        margin: auto;
+    }
+}
+
+.carousel-inner {
+    max-width: 800px; /* Ajusta este valor */
+    margin: auto;
+  }
