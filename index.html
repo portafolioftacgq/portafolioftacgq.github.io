@@ -215,13 +215,28 @@
                             style="color: white;">Narrativas Digitales</strong></p>
                 </div>
                 <div class="col-md-4">
-                    <p>Contador de visitas: "NUMERO"</p>
+                    <p id="contador-visitas">Contador de visitas: 0</p> 
                 </div>
 
             </div>
         </div>
     </footer>
+    <script>
+        // Obtiene el elemento donde se mostrará el contador
+        const contadorVisitas = document.getElementById('contador-visitas');
 
+        // Obtiene el número de visitas del localStorage o inicia en 0
+        let visitas = localStorage.getItem('visitas') || 0;
+
+        // Incrementa el número de visitas
+        visitas++;
+
+        // Muestra el número de visitas en el elemento
+        contadorVisitas.textContent = `Contador de visitas: ${visitas}`;
+
+        // Guarda el número de visitas en el localStorage
+        localStorage.setItem('visitas', visitas);
+    </script>
 
 
 </body>
